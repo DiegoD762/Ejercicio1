@@ -1,0 +1,34 @@
+public class Localidad {
+    private String nombre;
+    private int capacidadTotal;
+    private int capacidadDisponible;
+    private double precio;
+
+    public Localidad(String nombre, int capacidadTotal, double precio) {
+        this.nombre = nombre;
+        this.capacidadTotal = capacidadTotal;
+        this.capacidadDisponible = capacidadTotal;
+        this.precio = precio;
+    }
+
+    
+    public String getNombre() { return nombre; }
+    public void setNombre(String nombre) { this.nombre = nombre; }
+
+    public int getCapacidadTotal() { return capacidadTotal; }
+    public void setCapacidadTotal(int capacidadTotal) { this.capacidadTotal = capacidadTotal; }
+
+    public int getCapacidadDisponible() { return capacidadDisponible; }
+    public void setCapacidadDisponible(int capacidadDisponible) { this.capacidadDisponible = capacidadDisponible; }
+
+    public double getPrecio() { return precio; }
+    public void setPrecio(double precio) { this.precio = precio; }
+
+    public boolean validarYReducirCapacidad(int cantidad) {
+        if (capacidadDisponible >= cantidad) {
+            capacidadDisponible -= cantidad;
+            return true;
+        }
+        return false;
+    }
+}

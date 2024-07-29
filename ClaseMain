@@ -1,0 +1,54 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        SistemaDeVenta sistema = new SistemaDeVenta("20240724");
+        sistema.getListaDeLocalidades().add(new Localidad("Localidad 1", 1000, 100));
+        sistema.getListaDeLocalidades().add(new Localidad("Localidad 5", 500, 500));
+        sistema.getListaDeLocalidades().add(new Localidad("Localidad 10", 100, 1000));
+
+        Scanner scanner = new Scanner(System.in);
+        boolean continuar = true;
+        
+        while (continuar) {
+            mostrarMenu();
+            int opcion = scanner.nextInt();
+            ejecutarOpcion(opcion, sistema);
+            System.out.println("¿Desea continuar? (s/n)");
+            String respuesta = scanner.next();
+            continuar = respuesta.equalsIgnoreCase("s");
+        }
+        scanner.close();
+    }
+
+    public static void mostrarMenu() {
+        System.out.println("1. Comprar boletos");
+        System.out.println("2. Consultar disponibilidad total");
+        System.out.println("3. Consultar disponibilidad por localidad");
+        System.out.println("4. Generar reporte de caja");
+        System.out.println("5. Salir");
+    }
+
+    public static void ejecutarOpcion(int opcion, SistemaDeVenta sistema) {
+        switch (opcion) {
+            case 1:
+                
+                break;
+            case 2:
+                
+                break;
+            case 3:
+                
+                break;
+            case 4:
+                
+                break;
+            case 5:
+                System.out.println("Gracias por usar el sistema. Adiós.");
+                System.exit(0);
+                break;
+            default:
+                System.out.println("Opción inválida.");
+        }
+    }
+}

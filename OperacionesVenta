@@ -1,0 +1,7 @@
+public interface OperacionesVenta {
+    void agregarComprador(Comprador comprador);
+    void comprarBoletos(Comprador comprador, int cantidad);
+    void consultarDisponibilidadTotal();
+    void consultarDisponibilidadPorLocalidad(String nombreLocalidad);
+    void generarReporteDeCaja();
+}

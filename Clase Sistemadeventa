@@ -1,0 +1,53 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class SistemaDeVenta implements OperacionesVenta {
+    private List<Localidad> listaDeLocalidades;
+    private List<Comprador> listaDeCompradores;
+    private int correlativo;
+    private String fecha;
+
+    public SistemaDeVenta(String fecha) {
+        this.listaDeLocalidades = new ArrayList<>();
+        this.listaDeCompradores = new ArrayList<>();
+        this.correlativo = 1;
+        this.fecha = fecha;
+    }
+
+   
+    public void agregarComprador(Comprador comprador) {
+        listaDeCompradores.add(comprador);
+    }
+
+    
+    public void comprarBoletos(Comprador comprador, int cantidad) {
+        
+    }
+
+    
+    public void consultarDisponibilidadTotal() {
+        
+    }
+
+    
+    public void consultarDisponibilidadPorLocalidad(String nombreLocalidad) {
+        
+    }
+
+    
+    public void generarReporteDeCaja() {
+        
+    }
+
+    public List<Localidad> getListaDeLocalidades() { return listaDeLocalidades; }
+    public void setListaDeLocalidades(List<Localidad> listaDeLocalidades) { this.listaDeLocalidades = listaDeLocalidades; }
+
+    public List<Comprador> getListaDeCompradores() { return listaDeCompradores; }
+    public void setListaDeCompradores(List<Comprador> listaDeCompradores) { this.listaDeCompradores = listaDeCompradores; }
+
+    public int getCorrelativo() { return correlativo; }
+    public void setCorrelativo(int correlativo) { this.correlativo = correlativo; }
+
+    public String getFecha() { return fecha; }
+    public void setFecha(String fecha) { this.fecha = fecha; }
+}

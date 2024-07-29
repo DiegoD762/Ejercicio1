@@ -1,0 +1,27 @@
+public class Ticket {
+    private String numero;
+    private String fecha;
+    private Localidad localidad;
+    private Comprador comprador;
+
+    public Ticket(String numero, String fecha, Localidad localidad, Comprador comprador) {
+        this.numero = numero;
+        this.fecha = fecha;
+        this.localidad = localidad;
+        this.comprador = comprador;
+    }
+
+    
+    public String getNumero() { return numero; }
+    public void setNumero(String numero) { this.numero = numero; }
+
+    public String getFecha() { return fecha; }
+    public void setFecha(String fecha) { this.fecha = fecha; }
+
+    public Localidad getLocalidad() { return localidad; }
+    public void setLocalidad(Localidad localidad) { this.localidad = localidad; }
+
+    public Comprador getComprador() { return comprador; }
+    public void setComprador(Comprador comprador) { this.comprador = comprador; }
+}
+
